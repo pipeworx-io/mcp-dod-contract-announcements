@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/dod-contract-announcements",
   "title": "Dod Contract Announcements",
   "description": "DoD Contract Announcements MCP — the daily press-release feed of every US",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/dod-contract-announcements",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-dod-contract-announcements",
