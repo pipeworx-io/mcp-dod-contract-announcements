@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-dod-contract-announcements",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "DoD Contract Announcements MCP — the daily press-release feed of every US defense contract award of $7.5M or more, published by the Department of War (the renamed Department of Defense; defense.gov now redirects to war.gov) on the business day the contract is signed.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-dod-contract-announcements": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "dod-contract-announcements"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-dod-contract-announcements.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/dod-contract-announcements",
   "pipeworx": {
-    "sourceHash": "v1-68b22728e06ad379b3dda7beef5a391ecea34ada2131f6e757ee4abec49ca123",
-    "sourceCommit": "29fb434ca65fe0f61191f19c3502f583f5fb99d7"
+    "mode": "gateway",
+    "slug": "dod-contract-announcements",
+    "gatewaySlug": "dod-contract-announcements",
+    "sourceHash": "v1-b9778d9ead36d2f7c5b2a2a2c1c9ef632f4ece3f7912f17544f1c50c839a8798",
+    "sourceCommit": "0b3faaa4d85299a961dd86dea75a0f0e1dad280c"
   }
 }
